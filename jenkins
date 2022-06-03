@@ -1,0 +1,36 @@
+pipeline{
+
+agent any
+
+stages{
+
+stage ('cloning git'){
+
+steps{
+git branch: 'main', url: 'https://github.com/harshasampgit/project1.git'
+sh ls
+}
+
+}
+
+
+stage ('build'){
+
+steps{a
+sh "mvn install"
+}
+
+}
+
+
+stage ('deployment'){
+
+steps{
+sh "ansible --version"
+}
+
+}
+
+}
+
+}
