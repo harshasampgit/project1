@@ -23,7 +23,7 @@ pipeline
             {
                 script
                 {
-                    sh "docker build -t tomcat:1 ."
+                    sh "docker build -t tomcat:1.0 ."
                 }
             }
         }
@@ -40,8 +40,8 @@ pipeline
         {
              steps 
              {
-                sh 'docker tag tomcat:1 harshabu/tomcat:1'
-                sh 'docker push harshabu/tomcat:1'
+                sh 'docker tag tomcat:1 harshabu/tomcat:1.0'
+                sh 'docker push harshabu/tomcat:1.0'
              }
         }  
 	
@@ -51,7 +51,7 @@ pipeline
             {
                 script
                 {
-                    sh "docker run -d -p 8086:8080 harshabu/tomcat:1"
+                    sh "docker run -d -p 8086:8080 harshabu/tomcat:1.0"
                 }
             }
         }                                                                                                                                                                           
