@@ -40,7 +40,7 @@ pipeline
         {
              steps 
              {
-                sh 'docker tag tomcat:1 harshabu/tomcat:1.0'
+                sh 'docker tag tomcat:1.0 harshabu/tomcat:1.0'
                 sh 'docker push harshabu/tomcat:1.0'
              }
         }  
